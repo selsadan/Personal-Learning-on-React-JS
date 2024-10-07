@@ -106,14 +106,43 @@
 
 // Responding to Events
 
-export default function App() {
+// export default function App() {
+//   function handleClick() {
+//     alert('You clicked me!');
+//   }
+
+//   return (
+//     <button onClick={handleClick}>
+//       Click me
+//     </button>
+//   );
+// }
+
+
+// Updating the Screen 
+
+import { useState } from 'react';
+
+export default function MyApp() {
+  return (
+    <div>
+      <h1>Counters that update separately</h1>
+      <MyButton />
+      <MyButton />
+    </div>
+  );
+}
+
+function MyButton() {
+  const [count, setCount] = useState(0);
+
   function handleClick() {
-    alert('You clicked me!');
+    setCount(count + 1);
   }
 
   return (
     <button onClick={handleClick}>
-      Click me
+      Clicked {count} times
     </button>
   );
 }
