@@ -177,7 +177,7 @@
 // }
 
 
-// Build a static version of React
+// Build a static version of React Here learning never ends!
 
 function ProductCategoryRow({ category }) {
   return (
