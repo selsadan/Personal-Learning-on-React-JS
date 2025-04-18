@@ -233,6 +233,31 @@ function ProductTable({ products }) {
       </thead>
       <tbody>{rows}</tbody>
     </table>
+  );
+}
+
+function SearchBar() {
+  return (
+    <form>
+      <input type="text" placeholder="Search..." />
+      <label>
+        <input type="checkbox" />
+        {' '}
+        Only show products in stock
+      </label>
+    </form>
+  );
+}
+
+function FilterableProductTable({ products }) {
+  return (
+    <div>
+      <h2>Keep Reading</h2>
+      <SearchBar />
+      <ProductTable products={products} />
+    </div>
+  );
+}
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
