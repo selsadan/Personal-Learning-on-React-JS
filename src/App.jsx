@@ -231,7 +231,31 @@ function ProductTable({ products }) {
           <th>Price</th>
         </tr>
       </thead>
-      <tbody>{rows}
+      <tbody>{rows}</tbody>
+    </table>
+  );
+}
+
+function SearchBar() {
+  return (
+    <form>
+      <input type="text" placeholder="Search..." />
+      <label>
+        <input type="checkbox" />
+        {' '}
+        Only show products in stock
+      </label>
+    </form>
+  );
+}
+
+function FilterableProductTable({ products }) {
+  return (
+    <div>
+      <h2>Keep Reading</h2>
+      <SearchBar />
+      <ProductTable products={products} />
+    </div>
   );
 }
 
